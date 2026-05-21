@@ -1,0 +1,12 @@
+console.log("Hello world");
+let a = 6;
+let b = 9;
+let c = true;
+console.log(c);
+let f = false;
+let d = a + b;
+let e = d + c;
+let g = c + f;
+console.log(d);
+console.log(e);
+console.log(g);
