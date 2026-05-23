@@ -7,18 +7,12 @@ function reverseString(str) {
   return str.split("").reverse().join("");
 }
 
-console.log("--- reverseString ---");
-console.log(
-  'Input: "hello" | Expected: "olleh" | Actual:',
-  reverseString("hello"),
-);
-
 function fizzBuzz(n) {
   // BUG: mixes up Fizz/Buzz conditions (prints 'Fizz' for multiples of 5)
   for (let i = 1; i <= n; i++) {
     if (i % 5 === 0 && i % 3 === 0) console.log("FizzBuzz");
-    else if (i % 5 === 0) console.log("Fizz");
-    else if (i % 3 === 0) console.log("Buzz");
+    else if (i % 5 === 0) console.log("Buzz");
+    else if (i % 3 === 0) console.log("Fizz");
     else console.log(i);
   }
 }
@@ -33,6 +27,12 @@ function flatten(arr, depth = 1) {
   // BUG: always performs a single-level flatten regardless of depth
   return arr.reduce((acc, val) => acc.concat(val), []);
 }
+
+console.log("\n--- flatten ---");
+console.log(
+  "Input: [1,[2,3],[4,[5]]] | Expected: [1,2,3,4,5] | Actual:",
+  flatten([1, [2, 3], [4, [5]]], Infinity),
+);
 
 function debounce(fn, wait) {
   // BUG: missing cancel method (should return a wrapper with `cancel`)
